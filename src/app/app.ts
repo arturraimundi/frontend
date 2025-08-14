@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { PassengerListComponent } from  '../passenger-list/passenger-list';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [PassengerListComponent],
+   template: `
+    <app-passenger-list></app-passenger-list>
+  `
 })
 export class App {
   protected title = 'frontend';
