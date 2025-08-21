@@ -1,0 +1,61 @@
+<div class="home-container" *ngIf="!showSecond && !showTutorial">
+    <h2>Bem vindo ao ByBus</h2>
+    <p>Sua plataforma para transporte inteligente.</p>
+    <button (click)="showNext()">Continue</button>
+</div>
+<div class="home-container" *ngIf="showSecond && !showTutorial">
+    <h2>É sua primeira vez aqui?</h2>
+    <div>
+        <button (click)="showTutorials()" (click)="showNext()">Sim</button>
+        <button routerLink="/login">Nao</button>
+    </div>
+    <p>Descubra como podemos ajudar você a se locomover com eficiência.</p>
+</div>
+<div class="home-container" *ngIf="showTutorial && !showModoDeUso">
+    <h3>Como funciona</h3>
+            <p>Aprenda a usar nossa plataforma para planejar suas viagens a universidade.</p>
+    <div class="cards">      
+            
+        <div class="card">
+            <h3>Fase 1</h3>
+            <p>Cadastro de motoristas</p>
+        </div>
+        <div class="card">
+            <h3>Fase 2</h3>
+            <p>Cadastro de veiculos</p>
+        </div>
+        <div class="card">
+            <h3>Fase 3</h3>
+            <p>Cadastro de passageiros</p>
+        </div>
+    
+
+</div>
+<div class="card">
+    <button (click)="modoDeUso()">Continuar</button>
+</div>
+</div>
+<div class="home-container" *ngIf="showModoDeUso">
+    <h3>Modo de uso</h3>
+         
+    <div class="cards">      
+            
+        <div class="card">
+            <h3>primeiro passo</h3>
+            <p>Acesse o ByBus com seu login e senha</p>
+        </div>
+        <div class="card">
+            <h3>segundo passo</h3>
+            <p>Inicie uma viagem</p>
+        </div>
+        <div class="card">
+            <h3>Terceiro passo</h3>
+            <p>Faça a contagem de passageiros</p>
+        </div>
+    
+
+</div>
+<div class="card">
+    <button routerLink="/login">Criar conta</button>
+</div>
+</div>
